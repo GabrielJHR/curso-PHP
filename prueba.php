@@ -1,8 +1,8 @@
 
 <?php
 
-    include 'funcion.php';
-    echo algo();
+    //include 'funcion.php';
+    //echo algo();
     //SUBIR UN ARCHIVO
     /*
     if(is_uploaded_file($_FILES['curso']['tmp_name'])){
@@ -46,4 +46,5 @@
         echo $id_sesion;
     */
 
+    
 ?>
