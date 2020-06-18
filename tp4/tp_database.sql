@@ -25,6 +25,7 @@ create table if not exists persona(
     email varchar(100) NOT NULL,
     telefono varchar(20),
     celular varchar(20),
+    domicilio varchar(100),
     provincia varchar(100),
     localidad varchar(100),
     FOREIGN KEY (idtipodocumento) REFERENCES tipodocumento(idtipodocumento)
@@ -52,9 +53,3 @@ VALUES(1, 1, 'Administrador', 'Usuario', 0, 'M', 'admin@sgu.com');
 
 INSERT INTO usuario(idusuario, idpersona, idtipousuario, nombre, contrasenia)
 VALUES(1, 1, 1, 'admin', 'admin');
-
-SELECT u.idusuario, u.nombre as username, p.apellido, p.nombre, td.descripcion as tipodocumento, p.numerodocumento, p.email
-FROM persona p, usuario u, tipodocumento td
-WHERE p.idpersona = u.idpersona
-AND p.idtipodocumento = td.idtipodocumento
-AND u.idtipousuario <> 1;
